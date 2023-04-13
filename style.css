@@ -1,0 +1,17 @@
+/*
+==================================
+    CSS STYLESHEET
+==================================
+
+FYI: I'm only testing this sh*t on Chromium-based Edge because a vast majority uses Chromium no matter the platform.
+Source: https://gs.statcounter.com/browser-market-share
+*/
+
+
+* {
+    margin: 0;  /* Nuke default margin - it's an annoyance to work with */
+    padding: 0;     /* Nuke default padding as well */
+    box-sizing: border-box;     /* Makes box sizing more logical -- https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+}
+
+
