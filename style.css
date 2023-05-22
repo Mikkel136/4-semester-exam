@@ -8,10 +8,119 @@ Source: https://gs.statcounter.com/browser-market-share
 */
 
 
+
 * {
     margin: 0;  /* Nuke default margin - it's an annoyance to work with */
     padding: 0;     /* Nuke default padding as well */
     box-sizing: border-box;     /* Makes box sizing more logical -- https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 }
 
+.hidden {      /* To be used as default for items that are to be toggled by JavaScript */
+    display: none;
+}
 
+
+
+/* ====== CSS VARIABLES START ====== */
+
+    :root {             /* CSS Variables work a lot like Components in XD or Swatches in Illustrator, Photoshop, InDesign, etc - If there's a need adjust the colors, this will save a lot of time */
+        /* Fonts */
+            --font1: Arial;
+            --font2: Arial;
+        /* Colors */
+            --color1: #FF00FF;
+            --color2: #FF00FF;
+            --color3: #FF00FF;
+            --color4: #FF00FF;
+            --color5: #FF00FF;
+        /* Margins - To streamline left-right margins for mis.c objects */
+            --default-width: 90%;
+    }
+
+/* end of css variables */
+
+
+
+
+/* ====== NAVIGATION MENU START ====== */
+
+    /* --- Navigation bar as a whole --- */
+
+    nav#burger-content {    /* [Only visible when clicked] -- The contents and design of the Burger Menu */
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: hotpink;
+        z-index: 1;
+    }
+
+    nav#main, nav#main .SoMe {       /* Properly align items in the nav menu */
+        display: flex;
+    }
+
+    nav#main {                  /* Navigation bar */
+        background: white;
+        position: fixed;
+        width: 100%;
+        height: 78px;
+        z-index: 2;     /* Be infront of Burger Menu (when active) which has a Z of 1 - default is 0 */
+    
+        background-color: orange /* TEMP - TO BE FIXED */
+    }
+
+    nav#main .container {
+        display: flex;
+        justify-content: space-between;     /* Properly align contents of the navbar */
+        align-items: center;    /* Vertically align items to the center */
+        width: var(--default-width);
+        margin: 0 auto; 
+    }
+
+    nav#main button {       /* Fix default styling of buttons in the navbar */
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+
+
+    /* --- Social Media buttons --- */
+    
+    nav#main .SoMe {
+
+    }
+
+    nav#main .SoMe a {
+        display: block;
+        gap: 12px;
+        font-size: 0    /* Hide text only there for screen readers */
+    }
+
+    
+
+    /* --- DLB Logo --- */
+    
+    nav#main .logo {
+
+    }
+
+    
+    
+    /* --- Burger Menu toggle --- */
+
+    nav#main .burger-menu {
+        font-size: 0    /* Hide text only there for screen readers */
+    }
+
+    nav#main .burger-menu.active {
+        filter: invert(1);
+    }
+
+
+
+
+    nav#main .desktop {     /* Desktop navigation strip - Only visible on large screens */
+        display: none;          /* Handled by @media query - must be hidden on Mobile version */
+    }
+
+/* end of navigation menu */
