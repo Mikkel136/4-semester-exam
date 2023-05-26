@@ -27,9 +27,6 @@
         <script src="js/contact-form.js"></script>      <!-- Coded User Journey JS reference -->
     <!-- END OF LOCAL REFERENCES -->
 
-    <!-- EXTERNAL REFERENCES START -->
-        
-    <!-- END OF EXTERNAL REFERENCES -->
 </head>
 
 
@@ -37,9 +34,19 @@
 
 <body>
 
-    <nav id="burger-content" class="hidden">
-        <!-- Burger Menu design to be finalized in Figma first -->
-            <!-- This entire section will appear with the click of a button. This menu must be at the top to avoidconflicts with other elements. -->
+    <nav id="burger-content" class="hidden">    <!-- Mobile full-screen burger menu content - Hidden by defualt -->
+        <div class="container">
+            <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
+
+            <ul>
+                <li> <a href="index.html" class="active"> <span class="marker"></span> Hjem</a> </li>
+                <li> <a href="#"> <span class="marker"></span> Projekter</a> </li>
+                <li> <a href="#"> <span class="marker"></span> Tjenester</a> </li>
+                <li> <a href="#"> <span class="marker"></span> Booking</a> </li>
+                <li> <a href="#"> <span class="marker"></span> Om os</a> </li>
+                <li> <a href="#"> <span class="marker"></span> Kontakt</a> </li>
+            </ul>
+        </div>
     </nav>
 
 
@@ -47,14 +54,14 @@
         <div class="container">     <!-- This container fixes issues as the 'nav' tag has 'position: fixed' which likes to fuck with things -->
             
             <div class="SoMe">  <!-- SoMe links and icons -->
-                <a href="" target="_blank" rel="nofollow"> <img src="img/icon/facebook.svg" alt="Facebook icon"> Besøg DLB's Facebookside </a>   <!-- target="_blank" = Open in a new Tab    rel="nofollow" = Tell Google not to follow the link -->
-                <a href="" target="_blank" rel="nofollow"> <img src="img/icon/instagram.svg" alt="Instagram icon"> Besøg DLB's Instagram </a>
-                <a href="" target="_blank" rel="nofollow"> <img src="img/icon/linkedin.svg" alt="LinkedIn icon"> Besøg DLB's LinkedIn-side</a>
+                <a href="https://www.facebook.com/DLBARKITEKTERApS" target="_blank" rel="noopener nofollow"> <img src="img/icons/facebook-icon.svg" alt="Facebook icon"> Besøg DLB's Facebookside </a>   <!-- target="_blank" = Open in a new Tab    rel="nofollow" = Tell Google not to follow the link -->
+                <a href="https://www.instagram.com/dlbarkitekter" target="_blank" rel="noopener nofollow"> <img src="img/icons/instagram-icon.svg" alt="Instagram icon"> Besøg DLB's Instagram </a>
+                <a href="https://www.linkedin.com/company/dlbetak-aps/about/" target="_blank" rel="noopener nofollow"> <img src="img/icons/linkedin-icon.svg" alt="LinkedIn icon"> Besøg DLB's LinkedIn-side</a>
             </div>
             
-            <a href="index.html" class="logo"> <img src="img/logo.png" alt="DLB Arkitekter logo"> </a>  <!-- DLB Logo -->
-
-            <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icon/burger-menu.svg" alt="Burger Menu toggle"> Menu </button>
+            <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
+            
+            <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icons/burger-menu-icon.svg" alt="Burger Menu toggle"> Menu </button>
         
             <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
                 <!-- Design to be finished in Figma ... -->

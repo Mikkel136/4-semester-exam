@@ -19,22 +19,24 @@ Source: https://gs.statcounter.com/browser-market-share
     display: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
 
 
 /* ====== CSS VARIABLES START ====== */
 
     :root {             /* CSS Variables work a lot like Components in XD or Swatches in Illustrator, Photoshop, InDesign, etc - If there's a need adjust the colors, this will save a lot of time */
         /* Fonts */
-            --font1: Arial;
-            --font2: Arial;
+            --font: "Montserrat", "Segoe UI", "Helvetica", "Roboto", sans-serif;    /* Montserrat is the main player, the rest are used as fallback */
         /* Colors */
-            --color1: #FF00FF;
-            --color2: #FF00FF;
-            --color3: #FF00FF;
-            --color4: #FF00FF;
-            --color5: #FF00FF;
+            --color1: #D9D9D9;
+            --color2: #C28671;
+            --color3: #8A99A0;
+            --color4: #F5F5F5;
         /* Margins - To streamline left-right margins for mis.c objects */
             --default-width: 90%;
+        /* Miscelanious - Sizes of common elements, etc */
+            --nav-icon-size: 28px;
     }
 
 /* end of css variables */
@@ -42,30 +44,26 @@ Source: https://gs.statcounter.com/browser-market-share
 
 
 
+/* ====== MAIN PAGE ELEMENTS ====== */
+    body {
+        background-color: var(--color4);
+    }
+
+    h1, h2, h3, h4, h5, h6, a, p {
+        font-family: var(--font);
+    }
+
+
 /* ====== NAVIGATION MENU START ====== */
 
-    /* --- Navigation bar as a whole --- */
-
-    nav#burger-content {    /* [Only visible when clicked] -- The contents and design of the Burger Menu */
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        background-color: hotpink;
-        z-index: 1;
-    }
-
-    nav#main, nav#main .SoMe {       /* Properly align items in the nav menu */
-        display: flex;
-    }
-
     nav#main {                  /* Navigation bar */
+        display: flex;
         background: white;
         position: fixed;
         width: 100%;
         height: 78px;
         z-index: 2;     /* Be infront of Burger Menu (when active) which has a Z of 1 - default is 0 */
-    
-        background-color: orange /* TEMP - TO BE FIXED */
+        background-color: white;
     }
 
     nav#main .container {
@@ -76,51 +74,129 @@ Source: https://gs.statcounter.com/browser-market-share
         margin: 0 auto; 
     }
 
-    nav#main button {       /* Fix default styling of buttons in the navbar */
+
+    /* --- Social Media buttons --- */
+    
+    nav#main .SoMe {
+        gap: 8px;
+        display: flex;
+    }
+
+    nav#main .SoMe a {
+        display: flex;   /* Align SoMe icons correctly */
+        font-size: 0;    /* Hide text only there for the sake of screen readers */
+        max-width: var(--nav-icon-size);
+    }
+
+    nav#main .SoMe img {
+        width: 100%;
+    }
+
+
+    /* --- Logo ---- */
+    
+    nav .logo {
+        max-width: 72px;
+        font-size: 0;   /* Hide text only there for the sake of screen readers */ 
+    }
+   
+    nav .logo img {
+        width: 100%;
+    }
+
+    
+    /* --- Burger Menu --- */
+    
+    nav#main .burger-menu {
+        font-size: 0;    /* Hide text only there for the sake of screen readers */
+        max-width: var(--nav-icon-size);    /* Refers to :root variable instead of a fixed number for consistency reasons */
+    }
+
+    nav#main .burger-menu img {
+        width: 100%;
+    }
+
+    
+    /* --- Burger Menu toggle --- */
+
+    nav#main .burger-menu {
+        font-size: 0;    /* Hide text only there for screen readers */
         border: none;
         background: none;
         cursor: pointer;
     }
 
-
-
-    /* --- Social Media buttons --- */
-    
-    nav#main .SoMe {
-
-    }
-
-    nav#main .SoMe a {
-        display: block;
-        gap: 12px;
-        font-size: 0    /* Hide text only there for screen readers */
-    }
-
-    
-
-    /* --- DLB Logo --- */
-    
-    nav#main .logo {
-
-    }
-
-    
-    
-    /* --- Burger Menu toggle --- */
-
-    nav#main .burger-menu {
-        font-size: 0    /* Hide text only there for screen readers */
-    }
-
     nav#main .burger-menu.active {
+        background-color: white;
+        border-radius: 12px;
         filter: invert(1);
     }
 
 
-
+    /* --- Desktop Navigation Menu items --- */
 
     nav#main .desktop {     /* Desktop navigation strip - Only visible on large screens */
         display: none;          /* Handled by @media query - must be hidden on Mobile version */
+    
+    
     }
+
+
+    /* --- Mobile Fullscreen Burger Menu --- */
+
+    nav#burger-content {    /* [Only visible when clicked] -- The contents and design of the Burger Menu */
+        width: 100%;
+        height: 100vh;
+        position: fixed;    /* Forces the nav to stay in place and float on top no matter what */
+        z-index: 1;
+        background-color: white;
+    }
+
+    nav#burger-content .container {
+        width: 75%;
+        margin-top: 170px;
+        margin-left: 5%;    /* Minor adjustments -  */
+    }
+
+    nav#burger-content .container .logo img {
+        max-width: 80px;
+    }
+
+    nav#burger-content .container ul {
+        list-style-type: none;      /* Removes bullet points */
+
+    }
+
+    nav#burger-content .container ul li {
+        border-bottom: var(--color1) solid 2px;     /* Seperate the links with a line */
+    }
+
+    nav#burger-content .container ul li:last-child {
+        border: none;   /* Fix issue with the last element */
+    }
+
+    nav#burger-content .container ul li a {
+        display: flex;
+        gap: 6px;
+        height: 54px;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2em;
+        align-items: center;
+    }
+
+    nav#burger-content .container ul li a .marker {
+        width: var(--nav-icon-size);
+        height: var(--nav-icon-size);
+        background: none;
+        display: block;
+        background-position-x: -4px;
+    }
+
+    nav#burger-content .container ul li a:hover .marker, nav#burger-content .container ul li a.active .marker {
+        background-image: url(img/icons/active-nav-item-icon.svg);
+    }
+
 
 /* end of navigation menu */
