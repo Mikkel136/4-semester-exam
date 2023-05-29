@@ -7,7 +7,7 @@ FYI: I'm only testing this sh*t on Chromium-based Edge because a vast majority u
 Source: https://gs.statcounter.com/browser-market-share
 */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
 * {
     margin: 0;  /* Nuke default margin - it's an annoyance to work with */
@@ -105,17 +105,25 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     
+<<<<<<< Updated upstream
     /* --- Burger Menu --- */
     
     nav#main .burger-menu {
         font-size: 0;    /* Hide text only there for the sake of screen readers */
         max-width: var(--nav-icon-size);    /* Refers to :root variable instead of a fixed number for consistency reasons */
     }
+=======
+    nav#main .logo {
+        max-width: 200px;
+>>>>>>> Stashed changes
 
     nav#main .burger-menu img {
         width: 100%;
     }
+    .logo img{
+        max-width: 100px;
 
+    }
     
     /* --- Burger Menu toggle --- */
 
@@ -132,8 +140,15 @@ Source: https://gs.statcounter.com/browser-market-share
         filter: invert(1);
     }
 
+<<<<<<< Updated upstream
 
     /* --- Desktop Navigation Menu items --- */
+=======
+    .burgericon{
+        max-width: 30px;
+    }
+
+>>>>>>> Stashed changes
 
     nav#main .desktop {     /* Desktop navigation strip - Only visible on large screens */
         display: none;          /* Handled by @media query - must be hidden on Mobile version */
@@ -162,6 +177,7 @@ Source: https://gs.statcounter.com/browser-market-share
         max-width: 80px;
     }
 
+<<<<<<< Updated upstream
     nav#burger-content .container ul {
         list-style-type: none;      /* Removes bullet points */
 
@@ -199,4 +215,51 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
 
+=======
+    .icon img{
+        max-width: 30px;
+    }
+    .SoMe{
+        gap: 25px;
+    }
+    h3{
+
+    }
+
+
+
+    /*VIDEO - HAD THOSE AS PLACE HOLDERS, SHALL FIX LATER*/
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; 
+      }
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+   /*FOOTER CONTENT*/
+   .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   }
+   .SoMe{
+    gap: 25px;
+   }
+
+   .footer-info{
+    text-align: center;
+   }
+   .footer-bottom{
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+   }
+>>>>>>> Stashed changes
 /* end of navigation menu */
