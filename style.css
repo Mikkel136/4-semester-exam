@@ -110,6 +110,8 @@ Source: https://gs.statcounter.com/browser-market-share
     
     .cta .button:first-child {      /* ^ You get the idea */
         background-color: var(--color2);
+        color: white;
+        border: none;
     }
 
     .cta .button:hover {    /* I know it doesn't display correctly on mobile, but f*ck it :D */
@@ -286,7 +288,7 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- Repetitive stuff for sections and containers --- */
 
-    #process, #services, #project-phases, #project-list {   /* Fix sizing and alignment */
+    #process, #services, #project-phases, #project-list, #project-dev, #service-list {   /* Fix sizing and alignment */
         width: var(--default-width);
         margin: auto;   /* Center element properly */
     }
@@ -415,6 +417,39 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- SERVICES Page Elements --- */
     
+    #service-list .container {
+        margin-bottom: 44px;
+    }
+    
+    #service-list span {
+        display: block;
+        height: 55vw;
+        background-color: var(--color1);     /* Fallback for when images load */
+        background-position: center;
+        background-size: cover;
+    }
+
+    #service-list .box {
+        width: 90%;
+        margin: auto;
+        background-color: white;
+        border: var(--color3) solid 2px;
+        padding: 20px;
+        font-size: 0.82em;
+        line-height: 1.3em;
+        margin-top: -50px;
+    }
+
+    #service-list h2 {
+        text-align: center;
+        margin-bottom: 14px;
+        font-size: 1.6em;
+    }
+
+    /* Define background images */
+    #consultation-service   { background-image: url("img/thumbnails/consultation-service.jpg") }
+    #sketching-service      { background-image: url("img/thumbnails/sketching-service.jpg") }
+
 
     /* --- PROJECTS Page Elements --- */
     
