@@ -50,7 +50,7 @@ Source: https://gs.statcounter.com/browser-market-share
         background-color: var(--color4);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {        /* Re-use code and style multiple thingies at once */
         font-family: var(--font);
         font-weight: 600;
     }
@@ -65,7 +65,7 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     p.textbox {
-        margin: 18px auto;
+        margin: 18px auto;      /* Adds both top and bottom margin specifically to the textbox to simulate double line breaks */
         font-size: 0.9em;
         line-height: 1.4em;
     }
@@ -75,47 +75,47 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     .cta {      /* Call to Action - Consisting of heading and 1-3 buttons */
-        width: var(--default-width);
+        width: var(--default-width);    /* Refers to CSS variable so I only need to define width once */
         margin: auto;
-        margin-top: var(--default-top-margin);
+        margin-top: var(--default-top-margin);  /* Same here, except for margin-top */
         text-align: center;
     }
 
     .cta .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 10px;
+        display: flex;      /* Easiest, cleanest way to stack elements horizontally */
+        align-items: center;        /* Align items horizontally */
+        justify-content: center;    /* Align items vertically */
+        gap: 20px;      /* Margin between flex elements */
+        margin-top: 10px;   /* Distance itself a little from the heading above */
     }
 
     .cta .button {
-        display: block;
-        background-color: var(--color3);
-        color: white;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 0.8em;
+        display: block;     /* A tags display improperly; this fixes it */
+        background-color: var(--color3);    /* Refers to CSS variable in :root */
+        color: white;   /* Color = Text color */
+        text-transform: uppercase;      /*Turn all text into CAPS LOCK */
+        font-weight: 700;   /* Make text more thicc */      /* Yes, I weight shame fonts. Deal with it. 😎 */
+        font-size: 0.8em;       /* Reduce font size - I use EM instead of PX here, as EM is relative and scale better on mobile browsers*/  
         padding: 10px;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.06em;     /* Adds a little spacing between individual letters for legibility reasons */
         text-decoration: none;
-        transition: 0.2s;
+        transition: 0.2s;    /* Used with hover effect */
     }
 
-    .cta .button:last-child {
-        border: var(--color3) 2px solid;
+    .cta .button:last-child {   /* First-child = First-born element in a family (group) of elements */
+        border: var(--color3) 2px solid;    /* border (outline): [color] [thickness] [type] */
         color: var(--color3);
         background-color: white;
     }
     
-    .cta .button:first-child {
+    .cta .button:first-child {      /* ^ You get the idea */
         background-color: var(--color2);
     }
 
-    .cta .button:hover {
+    .cta .button:hover {    /* I know it doesn't display correctly on mobile, but f*ck it :D */
         background-color: black;
         color: white;
-        transform: scale(1.1);
+        transform: scale(1.1);   /* Scale element to 110% on hover */
     }
 
 
@@ -196,13 +196,13 @@ Source: https://gs.statcounter.com/browser-market-share
         font-size: 0;    /* Hide text only there for screen readers */
         border: none;
         background: none;
-        cursor: pointer;
+        cursor: pointer;    /* Make thing properly appear clickable */
     }
 
     nav#main .burger-menu.active {
-        background-color: white;
-        border-radius: 12px;
-        filter: invert(1);
+        background-color: white;    /* This is actually black, because invert filter below applies to this */
+        border-radius: 12px;    /* Rounded corners */
+        filter: invert(1);      /* Inverts the colors - so everything that's black turns white, vise-versa */
     }
 
 
@@ -260,7 +260,7 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     nav#burger-content .container ul li a .marker {
-        width: var(--nav-icon-size);
+        width: var(--nav-icon-size);    /* Uniformity with navbar icons */
         height: var(--nav-icon-size);
         background: none;   /* Hide pointer icon by default */
         display: block;
@@ -288,7 +288,7 @@ Source: https://gs.statcounter.com/browser-market-share
 
     #process, #services, #project-phases, #project-list {   /* Fix sizing and alignment */
         width: var(--default-width);
-        margin: auto;
+        margin: auto;   /* Center element properly */
     }
 
     #services, #project-list {     /* Apply top margin */
@@ -363,12 +363,12 @@ Source: https://gs.statcounter.com/browser-market-share
         text-decoration: none;
         color: white;
         background-color: var(--color1);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-position: center;    /* Fix background aligmnet */
+        background-size: cover;     /* Shrink background to fit */
+        background-repeat: no-repeat;   /* Turn off mechanic allowing background to "tile" */
         width: 100%;
-        height: 46vw;
-        transition: .1s;
+        height: 46vw;   /* Flexible item width - set element size to 46% of browser window width */
+        transition: .1s;    /* Hover effect stuff */
     }
 
     #project-list .item h3 {
@@ -387,7 +387,8 @@ Source: https://gs.statcounter.com/browser-market-share
         padding: 6px 20px;
         background-color: var(--color2);
         display: block;
-        width: fit-content;
+        width: -moz-fit-content;    /* Added this because VScode spits out error otherwise, which annoys me a lot more than it should :D */
+        width: fit-content;     /* Actual magic; set the box width to *just* the width they need - nothing more/less */
         margin: auto;
         margin-top: 16px;
     }
@@ -457,7 +458,7 @@ Source: https://gs.statcounter.com/browser-market-share
     footer .SoMe a {
         display: flex;   /* Align SoMe icons correctly */
         font-size: 0;    /* Hide text only there for the sake of screen readers */
-        max-width: var(--nav-icon-size);
+        max-width: var(--nav-icon-size);    /* More uniformity with the navbar icons */
     }
 
     footer .SoMe img {
