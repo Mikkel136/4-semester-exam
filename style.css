@@ -89,10 +89,11 @@ Source: https://gs.statcounter.com/browser-market-share
         margin-top: 10px;   /* Distance itself a little from the heading above */
     }
 
-    .cta .button {
+    .cta .button, #booking-system .button {
         display: block;     /* A tags display improperly; this fixes it */
         background-color: var(--color3);    /* Refers to CSS variable in :root */
         color: white;   /* Color = Text color */
+        border: none;
         text-transform: uppercase;      /*Turn all text into CAPS LOCK */
         font-weight: 700;   /* Make text more thicc */      /* Yes, I weight shame fonts. Deal with it. 😎 */
         font-size: 0.8em;       /* Reduce font size - I use EM instead of PX here, as EM is relative and scale better on mobile browsers*/  
@@ -100,21 +101,22 @@ Source: https://gs.statcounter.com/browser-market-share
         letter-spacing: 0.06em;     /* Adds a little spacing between individual letters for legibility reasons */
         text-decoration: none;
         transition: 0.2s;    /* Used with hover effect */
+        cursor: pointer
     }
 
-    .cta .button:last-child {   /* First-child = First-born element in a family (group) of elements */
+    .cta .button:last-child, #booking-system .button:last-of-type {   /* First-child = First-born element in a family (group) of elements */
         border: var(--color3) 2px solid;    /* border (outline): [color] [thickness] [type] */
         color: var(--color3);
         background-color: white;
     }
     
-    .cta .button:first-child {      /* ^ You get the idea */
+    .cta .button:first-child, #booking-system .button:first-of-type {      /* ^ You get the idea */
         background-color: var(--color2);
         color: white;
         border: none;
     }
 
-    .cta .button:hover {    /* I know it doesn't display correctly on mobile, but f*ck it :D */
+    .cta .button:hover, #booking-system .button:hover {    /* I know it doesn't display correctly on mobile, but f*ck it :D */
         background-color: black;
         color: white;
         transform: scale(1.1);   /* Scale element to 110% on hover */
@@ -288,12 +290,12 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- Repetitive stuff for sections and containers --- */
 
-    #process, #services, #project-phases, #project-list, #project-dev, #service-list {   /* Fix sizing and alignment */
+    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices {   /* Fix sizing and alignment */
         width: var(--default-width);
         margin: auto;   /* Center element properly */
     }
 
-    #services, #project-list {     /* Apply top margin */
+    #services, #project-list, #prices {     /* Apply top margin */
         margin-top: var(--default-top-margin);
     }
 
@@ -449,15 +451,143 @@ Source: https://gs.statcounter.com/browser-market-share
     /* Define background images */
     #consultation-service   { background-image: url("img/thumbnails/consultation-service.jpg") }
     #sketching-service      { background-image: url("img/thumbnails/sketching-service.jpg") }
-
-
-    /* --- PROJECTS Page Elements --- */
     
 
     /* --- BOOKING Page Elements --- */
     
+    #booking-system .container {
+        background-color: white;
+        border: 2px var(--color3) solid;
+        padding: 12px;
+        margin: 10px auto;
+    }
 
-    /* --- ABOUT-US Page Elements --- */
+    #booking-system .segment {
+        margin-bottom: 25px;
+    }
+
+    #booking-system .text-container, #booking-system label {
+        font-size: 0.8em;
+        font-family: var(--font);
+    }
+
+    #booking-system .text-container {
+        display: flex;
+        gap: 5px;
+    }
+
+    #booking-system .required {
+        font-size: 14px;
+        color: red;
+        font-weight: 600;
+    }
+
+    #booking-system .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #booking-system .button-container button {
+        background-color: var(--color1);
+        color: black;
+        border: none;
+        font-size: 0.64em;       /* Reduce font size - I use EM instead of PX here, as EM is relative and scale better on mobile browsers*/  
+        padding: 7px;
+        letter-spacing: 0.1em;     /* Adds a little spacing between individual letters for legibility reasons */
+        text-decoration: none;
+        transition: 0.2s;    /* Used with hover effect */
+        cursor: pointer;
+        transition: .1s;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    #booking-system .button-container button:hover {
+        background-color: var(--color3);
+        color: white;
+    }
+
+    #booking-system .button-container button.active {
+        background-color: var(--color2);
+        color: white;
+    }
+
+    #booking-system input, #booking-system textarea, #booking-system select {
+        width: 100%;
+        border: 2px var(--color3) solid;
+        padding: 8px;
+        font-family: var(--font);
+        font-weight: 600;
+    }
+
+    #booking-system .flex-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #booking-system .flex-container .segment {
+        width: 48%;
+    }
+
+    #booking-system select {
+        width: 100%;
+    }
+
+    #booking-system select option {
+        padding: 5000px !important;
+    }
+
+    #booking-system .button {
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: auto;
+    }
+
+    #booking-system .container .complete {      /* Style elements triggered when User Journey is complete */
+        padding: 151px 0;
+        text-align: center;
+    }
+
+    #booking-system .container .complete img { 
+        width: 100%;
+        max-width: 60px;
+        margin-bottom: 20px;
+    }
+
+    #prices {
+        display: flex;
+        gap: 18px;
+        text-align: center;
+    }
+
+    #prices .container {
+        width: 22%;
+    }
+
+    #prices .container img {
+        width: 60%;
+        max-width: 60px;
+        margin: auto;
+        font-size: 0;   /* Remove placeholder text when image is missing */
+        display: block;
+    }
+
+    #prices .container h2 {
+        font-size: 0.8em;
+        text-align: center;
+        margin-bottom: 4px;
+    }
+
+    #prices .container p {
+        font-size: 0.7em;
+        margin-bottom: 6px;
+    }
+    
+
+    /* --- ABOUT Page Elements --- */
     
 
     /* --- CONTACT Page Elements --- */
