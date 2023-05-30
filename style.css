@@ -286,12 +286,12 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- Repetitive stuff for sections and containers --- */
 
-    #process, #services {   /* Fix sizing and alignment */
+    #process, #services, #project-phases, #project-list {   /* Fix sizing and alignment */
         width: var(--default-width);
         margin: auto;
     }
 
-    #services {     /* Apply top margin */
+    #services, #project-list {     /* Apply top margin */
         margin-top: var(--default-top-margin);
     }
 
@@ -299,7 +299,7 @@ Source: https://gs.statcounter.com/browser-market-share
     /* --- FRONTPAGE Elements --- */
 
     #process video {
-        width: 100%;
+        width: 100%;    /* Allow video to be responsive */
         margin-bottom: 10px;
     }
 
@@ -315,11 +315,11 @@ Source: https://gs.statcounter.com/browser-market-share
         text-decoration: none;
         color: black;
         text-align: center;
-        transition: .1s;
+        transition: .1s;    /* Smoothen hover effect */
     }
 
     #services a:hover {
-        transform: scale(1.05);
+        transform: scale(1.05);     /* Enable hover effect */
     }
 
     #services a img {
@@ -331,7 +331,85 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- PROJECTS Page Elements --- */
 
-    
+    #project-phases .item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 21px;
+    }
+
+    #project-phases .item img {
+        width: 46px;
+    }
+
+    #project-phases .item h2 {
+        font-size: 0.95em;
+        font-weight: 700;
+    }
+
+    #project-phases .item p {
+        font-size: 0.85em;
+    }
+
+    #project-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #project-list .item {
+        margin: 10px auto 30px auto;    /* Shorthand for: margin-top: 10px; margin-right: auto; margin-bottom: 30px; margin-left: auto; */
+        text-decoration: none;
+        color: white;
+        background-color: var(--color1);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 46vw;
+        transition: .1s;
+    }
+
+    #project-list .item h3 {
+        text-shadow: 0px 0px 18px black;
+        height: 30vw;      /* Pre-defined height allows for text lines to be pushed upwards instead of downwards */
+        display: flex;      /* This in itself shouldn't do anything, BUT it enables behavior below */
+        align-items: flex-end;      /* Bottom-aligns text so text gets pushed upwards instead of downwards */
+        justify-content: center;
+    }
+
+    #project-list .item span {
+        font-size: 0.65em;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 6px 20px;
+        background-color: var(--color2);
+        display: block;
+        width: fit-content;
+        margin: auto;
+        margin-top: 16px;
+    }
+
+    #project-list .item:hover {
+        transform: scale(1.05);
+    }
+
+    /* Define project portfolio images with background-image */
+    /* The radial gradient overlay has been created with https://html-css-js.com/css/generator/text-shadow/ */
+    /* While this may be a spammy way of doing it, I don't care, it works JUST like I want it to!! */
+        #stuehus-tureby       { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/stuehus-tureby.jpg") }
+        #villa-karlslunde     { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/villa-karlslunde.png") }
+        #koekken-faxe         { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/koekken-faxe.png") }
+        #koekken-alleroed     { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/koekken-alleroed.png") }
+        #b6-femern            { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/b6-femern.png") }
+        #b5-femern            { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/b5-femern.jpg") }
+        #tagreno-roskilde     { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/tagreno-roskilde.png") }
+        #tilbygning-koege     { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/tilbygning-koege.png") }
+        #droemmehus-jystrup   { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/droemmehus-jystrup.jpg") }
+        #tilbygning-vaerloese { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/tilbygning-vaerloese.jpg") }
+        #stuehus-slagelse     { background-image: radial-gradient(ellipse farthest-corner at center center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url("img/projects/stuehus-slagelse.jpg") }
 
 
     /* --- SERVICES Page Elements --- */

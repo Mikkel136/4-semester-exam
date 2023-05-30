@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Responsive scaling for mobile devices -->
+    <link rel="icon" type="favicon" href="img/logo.jpg">
+    <!-- SEO START -->
+        <title>DLB ARKITEKTER ApS - Dan Betak</title>     <!-- SEO page title -->
+        <meta name="description" content="DLB Arkitekter ApS - Vores proces er vores varemærke. Vi har 10+ års erfaring med projektudvikling, skitsering og planlægning.">    <!-- SEO description -->
+        <meta name="theme-color" content="#fffff">      <!-- Theme color for SoMe -->
+        <!-- vvv Open Graph Protocol - Source: https://ogp.me/ -->
+            <meta property="og:image" content="https://exam.mikkl.info/img/thumbnails/SoMe/frontpage.jpg" />     <!-- Image to feed SoMe previews -->
+            <meta property="og:image:width" content="750" />   
+            <meta property="og:image:height" content="750" />
+            <meta property="og:locale" content="da_DK">
+            <meta property="og:type" content="website">     <!-- Define which type of content this website is -->
+            <meta property="og:title" content="DLB Arkitekter - Vi kan hjælpe">   <!-- Title for SoMe previews -->
+            <meta property="og:description" content="DLB Arkitekter ApS - Vores proces er vores varemærke. Vi har 10+ års erfaring med projektudvikling, skitsering og planlægning.">     <!-- Description for SoMe previews -->
+            <meta property="og:url" content="https://DLBark.dk">    <!-- Clean up URL for SoMe previews -->
+            <meta property="og:site_name" content="DLB Arkitekter ApS">
+        <!-- ^^^ End of Open Graph Protocol -->
+    <!-- END OF SEO -->  
+    
+    <!-- LOCAL REFERENCES START -->
+        <link rel="stylesheet" href="style.css">    <!-- Main CSS reference -->
+        <script src="js/main.js"></script>  <!-- Main JS reference -->
+        <script src="js/contact-form.js"></script>      <!-- Coded User Journey JS reference -->
+    <!-- END OF LOCAL REFERENCES -->
+
+</head>
+
+
+
+
+<body>
+
+    <nav id="burger-content" class="hidden">    <!-- Mobile full-screen burger menu content - Hidden by defualt -->
+        <div class="container">
+            <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
+
+            <ul>
+                <li> <a href="index.html" class="active"> <span class="marker"></span> Hjem</a> </li>
+                <li> <a href="projects.html"> <span class="marker"></span> Projekter</a> </li>
+                <li> <a href="services.html"> <span class="marker"></span> Tjenester</a> </li>
+                <li> <a href="booking.html"> <span class="marker"></span> Booking</a> </li>
+                <li> <a href="about.html"> <span class="marker"></span> Om os</a> </li>
+                <li> <a href="contact.html"> <span class="marker"></span> Kontakt</a> </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <nav id="main">   <!-- Main navigation -->
+        <div class="container">     <!-- This container fixes issues as the 'nav' tag has 'position: fixed' which likes to fuck with things -->
+            
+            <div class="SoMe">  <!-- SoMe links and icons -->
+                <a href="https://www.facebook.com/DLBARKITEKTERApS" target="_blank" rel="noopener nofollow"> <img src="img/icons/facebook-icon.svg" alt="Facebook icon"> Besøg DLB's Facebookside </a>   <!-- target="_blank" = Open in a new Tab    rel="nofollow" = Tell Google not to follow the link -->
+                <a href="https://www.instagram.com/dlbarkitekter" target="_blank" rel="noopener nofollow"> <img src="img/icons/instagram-icon.svg" alt="Instagram icon"> Besøg DLB's Instagram </a>
+                <a href="https://www.linkedin.com/company/dlbetak-aps/about/" target="_blank" rel="noopener nofollow"> <img src="img/icons/linkedin-icon.svg" alt="LinkedIn icon"> Besøg DLB's LinkedIn-side</a>
+            </div>
+            <!---SOME ICONS ARE FROM: https://www.flaticon.com/-->
+            
+            <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
+            
+            <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icons/burger-menu-icon.svg" alt="Burger Menu toggle"> Menu </button>
+        
+            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
+                <!-- Design to be finished in Figma ... -->
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <main id="project-phases">
+        <h1>De tre projektfaser</h1>
+       
+        <div class="item">
+            <img src="img/icons/checkmark.svg" alt="Flueben">
+            <div class="container">
+                <h2>Du udfylder formularen</h2>
+                <p>Beskriv dit byggeprojekt, krav og ønsker.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="img/icons/checkmark.svg" alt="Flueben">
+            <div class="container">
+                <h2>Vi holder et møde</h2>
+                <p>Kom gerne med flere muligheder for hvornår du har tiid til at mødes online.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="img/icons/checkmark.svg" alt="Flueben">
+            <div class="container">
+                <h2>Efter afholdt møde</h2>
+                <p>Du modtager et oplæg til processen herefter, samt et tilbud.</p>
+            </div>
+        </div>
+    </main>
+
+    
+    <section id="project-list">
+        <h2>Projektportfolio</h2>
+        
+        <a href="#" class="item" id="stuehus-tureby">
+            <h3>Ombygning af stuehus, <br> Tureby</h3>
+            <span>Ombygning</span>
+        </a>
+
+        <a href="#" class="item" id="villa-karlslunde">
+            <h3>Tilbygning til 60'er villa, <br> Karlslunde</h3>
+            <span>Tilbygning</span>
+        </a>
+
+        <a href="#" class="item" id="koekken-faxe">
+            <h3>Nyt køkken med ovenlys, <br> Faxe Ladeplads</h3>
+            <span>Ombygning</span>
+        </a>
+
+        <a href="#" class="item" id="koekken-alleroed">
+            <h3>Nyt køkken alrum med loft, <br> Allerød</h3>
+            <span>Ombygning</span>
+        </a>
+
+        <a href="#" class="item" id="b6-femern">
+            <h3>Camp B6 til Adapteo, <br> Femernbælt Byggepladsen</h3>
+            <span>Udvikling</span>
+        </a>
+
+        <a href="#" class="item" id="b5-femern">
+            <h3>Camp B5 til Adapteo, <br> Femernbælt Byggepladsen</h3>
+            <span>Udvikling</span>
+        </a>
+
+        <a href="#" class="item" id="tagreno-roskilde">
+            <h3>Tagrenovering og ny tagetage, <br> Roskilde</h3>
+            <span>Nyt tag</span>
+        </a>
+
+        <a href="#" class="item" id="tilbygning-koege">
+            <h3>Kæmpe tilbygning med forældreafdeling, stue og køkken, <br> Køge</h3>
+            <span>Tilbygning</span>
+        </a>
+
+        <a href="#" class="item" id="droemmehus-jystrup">
+            <h3>Drømmehuset på ny udstykning, <br> Jystrup </h3>
+            <span>Nyt hus</span>
+        </a>
+
+        <a href="#" class="item" id="tilbygning-vaerloese">
+            <h3>Tilbygning til to værelser og ny indretning, <br> Værløse </h3>
+            <span>Tilbygning</span>
+        </a>
+
+        <a href="#" class="item" id="stuehus-slagelse">
+            <h3>Stuehus rever ned og nyt hus opført, <br> Slagelse </h3>
+            <span>Nyt hus</span>
+        </a>
+
+        
+        
+    </section>
+
+
+    <section class="cta">
+        <h2>Er du vores næste projektpartner?</h2>
+        <div class="container">
+            <a href="booking.html" class="button">Kontakt DLB Arkitekter</a>
+            <a href="index.html" class="button">Vores proces</a>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div>
+            <h3>Kontakt</h3>
+            <p>22 88 91 35</p>
+        </div>
+
+        <div class="SoMe">
+            <a href="https://www.facebook.com/DLBARKITEKTERApS" target="_blank" rel="noopener nofollow"> <img src="img/icons/facebook-icon.svg" alt="Facebook icon"> Besøg DLB's Facebookside </a>   <!-- target="_blank" = Open in a new Tab    rel="nofollow" = Tell Google not to follow the link -->
+            <a href="https://www.instagram.com/dlbarkitekter" target="_blank" rel="noopener nofollow"> <img src="img/icons/instagram-icon.svg" alt="Instagram icon"> Besøg DLB's Instagram </a>
+            <a href="https://www.linkedin.com/company/dlbetak-aps/about/" target="_blank" rel="noopener nofollow"> <img src="img/icons/linkedin-icon.svg" alt="LinkedIn icon"> Besøg DLB's LinkedIn-side</a>
+        </div>
+
+        <div>
+            <h3>CVR</h3>
+            <p>40743464</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
