@@ -58,28 +58,38 @@
                 <a href="https://www.linkedin.com/company/dlbetak-aps/about/" target="_blank" rel="noopener nofollow"> <img src="img/icons/linkedin-icon.svg" alt="LinkedIn ikon"> Besøg DLB's LinkedIn-side</a>
             </div>
             <!---SOME ICONS ARE FROM: https://www.flaticon.com/-->
+
+            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
+                <li> <a href="index.html" class="active">Hjem</a> </li>
+                <li> <a href="projects.html">Projekter</a> </li>
+                <li> <a href="services.html">Tjenester</a> </li>
+                <li> <a href="booking.html">Booking</a> </li>
+                <li> <a href="about.html">Om os</a> </li>
+                <li> <a href="contact.html">Kontakt</a> </li>
+            </ul>
             
             <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
             
             <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icons/burger-menu-icon.svg" alt="Burgermenu knap"> Menu </button>
-        
-            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
-                <!-- Design to be finished in Figma ... -->
-            </ul>
         </div>
     </nav>
 
 
 
     <main id="process">
-        <h1>DLB's arbejdsprocess</h1>
-        <p class="textbox">Arbejdsprocessen er vores varemærke. Gennem vores faste proces og omhyggelige og detaljerede plan-lægning er vi i stand til at levere det fulde spektrum af arkitektydelser til en fast konkurrencedygtig pris, uanset projektets størrelse!</p>
-        <p class="textbox">Du får de fulde arkitektydelser på cirka samme måde, som havde du bestilt et typehus!</p>
-        <p class="textbox">Vi starter helt fra bunden. Kontakt DLB Arkitekter til et gratis uforpligtende møde – så kan vi i fællesskab komme det hele til bunds og få arbejdet med jeres ønsker og idéer.</p>
-    
+        <div>
+            <h1>DLB's arbejdsprocess</h1>
+            <p class="textbox">Arbejdsprocessen er vores varemærke. Gennem vores faste proces og omhyggelige og detaljerede plan-lægning er vi i stand til at levere det fulde spektrum af arkitektydelser til en fast konkurrencedygtig pris, uanset projektets størrelse!</p>
+            <p class="textbox">Du får de fulde arkitektydelser på cirka samme måde, som havde du bestilt et typehus!</p>
+            <p class="textbox">Vi starter helt fra bunden. Kontakt DLB Arkitekter til et gratis uforpligtende møde – så kan vi i fællesskab komme det hele til bunds og få arbejdet med jeres ønsker og idéer.</p>
+        </div>
+
         <section class="video">
-            <video controls>
+            <video controls class="mobile">
                 <source src="video/DLB-animation-mobile.mp4" type="video/mp4">
+            </video>
+            <video controls class="desktop">
+                <source src="video/DLB-animation-pc.mp4" type="video/mp4">
             </video>
         </section>
     </main>
@@ -97,18 +107,21 @@
 
 
     <section id="services">
-        <a href="#">
-            <img src="img/thumbnails/proj-udvikling.jpg" alt="Projektudvikling">
-            <p>Projekt&shy;udvikling</p>
-        </a>
-        <a href="#">
-            <img src="img/thumbnails/ark-konsultation.jpg" alt="Arkitektkonosultation">
-            <p>Arkitekt&shy;konsultation</p>
-        </a>
-        <a href="#">
-            <img src="img/thumbnails/sven-mieke-fteR0e2BzKo-unsplash.jpg" alt="Skitseforslag">
-            <p>Skitseforslag</p>
-        </a>
+        <h2>Hvad vi tilbyder</h2>
+        <div class="container">
+            <a href="#">
+                <img src="img/thumbnails/proj-udvikling.jpg" alt="Projektudvikling">
+                <p>Projekt&shy;udvikling</p>
+            </a>
+            <a href="#">
+                <img src="img/thumbnails/ark-konsultation.jpg" alt="Arkitektkonosultation">
+                <p>Arkitekt&shy;konsul&shy;tation</p>
+            </a>
+            <a href="#">
+                <img src="img/thumbnails/sven-mieke-fteR0e2BzKo-unsplash.jpg" alt="Skitseforslag">
+                <p>Skitse&shy;forslag</p>
+            </a>
+        </div>
     </section>
 
 
