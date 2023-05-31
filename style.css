@@ -382,7 +382,7 @@ Source: https://gs.statcounter.com/browser-market-share
         font-size: 0.85em;
     }
 
-    #project-list {
+    #project-list .container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -850,6 +850,41 @@ Source: https://gs.statcounter.com/browser-market-share
 
         #services .container a {
             max-width: 190px;
+        }
+
+
+        /* --- PROJECTS Page Elements --- */
+
+        #project-phases .main-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #project-phases .item {
+            width: 32%;
+            font-size: 0.9em;
+        }
+
+        #project-phases .item img {
+            width: 20%;
+        }
+
+        #project-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        #project-list .item {
+            width: 31%;
+            height: 160px;   /* Flexible item width - set element size to 46% of browser window width */
+            margin: 6px;
+        }
+
+        #project-list .item h3 {
+            height: 100px;
+            font-size: 0.9em;
         }
     
     /* (end of individual page contents) */

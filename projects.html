@@ -59,13 +59,18 @@
             </div>
             <!---SOME ICONS ARE FROM: https://www.flaticon.com/-->
             
+            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
+                <li> <a href="index.html">Hjem</a> </li>
+                <li> <a href="projects.html" class="active">Projekter</a> </li>
+                <li> <a href="services.html">Tjenester</a> </li>
+                <li> <a href="booking.html">Booking</a> </li>
+                <li> <a href="about.html">Om os</a> </li>
+                <li> <a href="contact.html">Kontakt</a> </li>
+            </ul>
+
             <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
             
             <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icons/burger-menu-icon.svg" alt="Burgermenu knap"> Menu </button>
-        
-            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
-                <!-- Design to be finished in Figma ... -->
-            </ul>
         </div>
     </nav>
 
@@ -74,89 +79,93 @@
     <main id="project-phases">
         <h1>De tre projektfaser</h1>
        
-        <div class="item">
-            <img src="img/icons/checkmark.svg" alt="Flueben">
-            <div class="container">
-                <h2>Du udfylder formularen</h2>
-                <p>Beskriv dit byggeprojekt, krav og ønsker.</p>
+        <section class="main-container">
+            <div class="item">
+                <img src="img/icons/checkmark.svg" alt="Flueben">
+                <div class="container">
+                    <h2>Du udfylder formularen</h2>
+                    <p>Beskriv dit byggeprojekt, krav og ønsker.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <img src="img/icons/checkmark.svg" alt="Flueben">
-            <div class="container">
-                <h2>Vi holder et møde</h2>
-                <p>Kom gerne med flere muligheder for hvornår du har tiid til at mødes online.</p>
+            <div class="item">
+                <img src="img/icons/checkmark.svg" alt="Flueben">
+                <div class="container">
+                    <h2>Vi holder et møde</h2>
+                    <p>Kom gerne med flere muligheder for hvornår du har tiid til at mødes online.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="item">
-            <img src="img/icons/checkmark.svg" alt="Flueben">
-            <div class="container">
-                <h2>Efter afholdt møde</h2>
-                <p>Du modtager et oplæg til processen herefter, samt et tilbud.</p>
+            <div class="item">
+                <img src="img/icons/checkmark.svg" alt="Flueben">
+                <div class="container">
+                    <h2>Efter afholdt møde</h2>
+                    <p>Du modtager et oplæg til processen herefter, samt et tilbud.</p>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     
     <section id="project-list">
         <h2>Projektportfolio</h2>
         
-        <a href="#" class="item" id="stuehus-tureby">
-            <h3>Ombygning af stuehus, <br> Tureby</h3>
-            <span>Ombygning</span>
-        </a>
+        <div class="container">
+            <a href="#" class="item" id="stuehus-tureby">
+                <h3>Ombygning af stuehus, <br> Tureby</h3>
+                <span>Ombygning</span>
+            </a>
 
-        <a href="#" class="item" id="villa-karlslunde">
-            <h3>Tilbygning til 60'er villa, <br> Karlslunde</h3>
-            <span>Tilbygning</span>
-        </a>
+            <a href="#" class="item" id="villa-karlslunde">
+                <h3>Tilbygning til 60'er villa, <br> Karlslunde</h3>
+                <span>Tilbygning</span>
+            </a>
 
-        <a href="#" class="item" id="koekken-faxe">
-            <h3>Nyt køkken med ovenlys, <br> Faxe Ladeplads</h3>
-            <span>Ombygning</span>
-        </a>
+            <a href="#" class="item" id="koekken-faxe">
+                <h3>Nyt køkken med ovenlys, <br> Faxe Ladeplads</h3>
+                <span>Ombygning</span>
+            </a>
 
-        <a href="#" class="item" id="koekken-alleroed">
-            <h3>Nyt køkken alrum med loft, <br> Allerød</h3>
-            <span>Ombygning</span>
-        </a>
+            <a href="#" class="item" id="koekken-alleroed">
+                <h3>Nyt køkken alrum med loft, <br> Allerød</h3>
+                <span>Ombygning</span>
+            </a>
 
-        <a href="#" class="item" id="b6-femern">
-            <h3>Camp B6 til Adapteo, <br> Femernbælt Byggepladsen</h3>
-            <span>Udvikling</span>
-        </a>
+            <a href="#" class="item" id="b6-femern">
+                <h3>Camp B6 til Adapteo, <br> Femernbælt Byggepladsen</h3>
+                <span>Udvikling</span>
+            </a>
 
-        <a href="#" class="item" id="b5-femern">
-            <h3>Camp B5 til Adapteo, <br> Femernbælt Byggepladsen</h3>
-            <span>Udvikling</span>
-        </a>
+            <a href="#" class="item" id="b5-femern">
+                <h3>Camp B5 til Adapteo, <br> Femernbælt Byggepladsen</h3>
+                <span>Udvikling</span>
+            </a>
 
-        <a href="#" class="item" id="tagreno-roskilde">
-            <h3>Tagrenovering og ny tagetage, <br> Roskilde</h3>
-            <span>Nyt tag</span>
-        </a>
+            <a href="#" class="item" id="tagreno-roskilde">
+                <h3>Tagrenovering og ny tagetage, <br> Roskilde</h3>
+                <span>Nyt tag</span>
+            </a>
 
-        <a href="#" class="item" id="tilbygning-koege">
-            <h3>Kæmpe tilbygning med forældreafdeling, stue og køkken, <br> Køge</h3>
-            <span>Tilbygning</span>
-        </a>
+            <a href="#" class="item" id="tilbygning-koege">
+                <h3>Kæmpe tilbygning med forældreafdeling, stue og køkken, <br> Køge</h3>
+                <span>Tilbygning</span>
+            </a>
 
-        <a href="#" class="item" id="droemmehus-jystrup">
-            <h3>Drømmehuset på ny udstykning, <br> Jystrup </h3>
-            <span>Nyt hus</span>
-        </a>
+            <a href="#" class="item" id="droemmehus-jystrup">
+                <h3>Drømmehuset på ny udstykning, <br> Jystrup </h3>
+                <span>Nyt hus</span>
+            </a>
 
-        <a href="#" class="item" id="tilbygning-vaerloese">
-            <h3>Tilbygning til to værelser og ny indretning, <br> Værløse </h3>
-            <span>Tilbygning</span>
-        </a>
+            <a href="#" class="item" id="tilbygning-vaerloese">
+                <h3>Tilbygning til to værelser og ny indretning, <br> Værløse </h3>
+                <span>Tilbygning</span>
+            </a>
 
-        <a href="#" class="item" id="stuehus-slagelse">
-            <h3>Stuehus rever ned og nyt hus opført, <br> Slagelse </h3>
-            <span>Nyt hus</span>
-        </a>
+            <a href="#" class="item" id="stuehus-slagelse">
+                <h3>Stuehus rever ned og nyt hus opført, <br> Slagelse </h3>
+                <span>Nyt hus</span>
+            </a>
+        </div>
 
         
         
