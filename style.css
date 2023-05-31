@@ -120,6 +120,8 @@ Source: https://gs.statcounter.com/browser-market-share
         transform: scale(1.1);   /* Scale element to 110% on hover */
     }
 
+/* (end of main page elements) */
+
 
 
 
@@ -769,10 +771,23 @@ Source: https://gs.statcounter.com/browser-market-share
             --default-width: 80%;
         /* Miscelanious - Sizes of common elements, etc */
             --nav-icon-size: 32px;
-            --default-top-margin: 90px;
+            --default-top-margin: 70px;
     }
 
     /* end of css variables */
+
+
+
+
+    /* ====== MAIN PAGE ELEMENTS ====== */
+
+        .cta .button, #booking-system .button, #contact-form .button {
+            font-size: 0.9em;
+            padding: 15px;
+            letter-spacing: 0.07em;
+        }
+
+    /* (end of main page elements) */
    
    
 
@@ -886,8 +901,38 @@ Source: https://gs.statcounter.com/browser-market-share
             height: 100px;
             font-size: 0.9em;
         }
-    
-    /* (end of individual page contents) */
+
+
+        /* --- SERVICES Page Elements --- */
+        
+        #project-dev {
+            max-width: 540px;
+            margin-bottom: var(--default-top-margin)
+        }
+        
+        #service-list {
+            display: flex;
+            gap: 7%;
+        }
+        
+        #service-list span {
+            display: block;
+            height: 200px;
+            background-color: var(--color1);     /* Fallback for when images load */
+            background-position: center;
+            background-size: cover;
+        }
+
+        #service-list .box {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        
+        /* (end of individual page contents) */
 
 
 
