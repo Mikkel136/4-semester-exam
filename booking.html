@@ -60,13 +60,18 @@
             </div>
             <!---SOME ICONS ARE FROM: https://www.flaticon.com/-->
             
+            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
+                <li> <a href="index.html">Hjem</a> </li>
+                <li> <a href="projects.html">Projekter</a> </li>
+                <li> <a href="services.html">Tjenester</a> </li>
+                <li> <a href="booking.html" class="active">Booking</a> </li>
+                <li> <a href="about.html">Om os</a> </li>
+                <li> <a href="contact.html">Kontakt</a> </li>
+            </ul>
+
             <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
             
             <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icons/burger-menu-icon.svg" alt="Burgermenu knap"> Menu </button>
-        
-            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
-                <!-- Design to be finished in Figma ... -->
-            </ul>
         </div>
     </nav>
 
@@ -135,31 +140,35 @@
     </main>
 
     <section id="prices">
-        <div class="container">
-            <img src="img/icons/meeting.svg" alt="Møde ikon">
-            <h2>Møde</h2>
-            <p>Alle møder er gratis!</p>
-        </div>
+        <h2>Prices</h2>
+        
+        <div class="flex-container">
+            <div class="container">
+                <img src="img/icons/meeting.svg" alt="Møde ikon">
+                <h2>Møde</h2>
+                <p>Alle møder er gratis!</p>
+            </div>
 
-        <div class="container">
-            <img src="img/icons/workshop.svg" alt="Wworkshop ikon">
-            <h2>Work&shy;shops</h2>
-            <p>5.000 kr. <br> inkl. moms</p>
-        </div>
+            <div class="container">
+                <img src="img/icons/workshop.svg" alt="Wworkshop ikon">
+                <h2>Work&shy;shops</h2>
+                <p>5.000 kr. <br> inkl. moms</p>
+            </div>
 
-        <div class="container">
-            <img src="img/icons/sketching.svg" alt="Skitsering ikon">
-            <h2>Skitse&shy;forslag</h2>
-            <p>(1. forslag) 18.000 kr.</p>
-            <p>(2. forslag) 24.000 kr.</p>
-            <p>(3. forslag) 35.000 kr.</p>
-            <p>inkl. moms</p>
-        </div>
+            <div class="container">
+                <img src="img/icons/sketching.svg" alt="Skitsering ikon">
+                <h2>Skitse&shy;forslag</h2>
+                <p>(1. forslag) 18.000 kr.</p>
+                <p>(2. forslag) 24.000 kr.</p>
+                <p>(3. forslag) 35.000 kr.</p>
+                <p>inkl. moms</p>
+            </div>
 
-        <div class="container">
-            <img src="img/icons/revision.svg" alt="Revision ikon">
-            <h2>Revisions&shy;runde</h2>
-            <p>8.000 kr. <br> inkl. moms</p>
+            <div class="container">
+                <img src="img/icons/revision.svg" alt="Revision ikon">
+                <h2>Revisions&shy;runde</h2>
+                <p>8.000 kr. <br> inkl. moms</p>
+            </div>
         </div>
     </section>
 

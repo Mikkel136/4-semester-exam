@@ -587,12 +587,16 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     #prices {
-        display: flex;
-        gap: 18px;
         text-align: center;
     }
 
-    #prices .container {
+    #prices .flex-container {
+        margin-top: 10px;
+        display: flex;
+        gap: 18px;
+    }
+
+    #prices .flex-container .container {
         width: 22%;
     }
 
@@ -930,6 +934,49 @@ Source: https://gs.statcounter.com/browser-market-share
             padding: 0;
             font-size: 0.9em;
             margin-top: 20px;
+        }
+
+
+
+        /* --- BOOKING Page Elements --- */
+    
+        #booking-system {
+            text-align: center;
+        }
+        
+        #booking-system .container {
+            text-align: left;
+            padding: 24px;
+            max-width: 640px;
+        }
+
+        #booking-system .text-container, #booking-system label, #contact-form label {
+            font-size: 1.1em;
+            line-height: 2em;
+        }
+
+        #booking-system .button-container {
+            gap: 12px;
+        }
+
+        #booking-system .button-container button {
+            font-size: 0.75em;       /* Reduce font size - I use EM instead of PX here, as EM is relative and scale better on mobile browsers*/  
+            padding: 9px;
+        }
+
+        #prices .flex-container .container {
+            width: 100%;
+        }
+
+        #prices .container h2 {
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        #prices .container p {
+            font-size: 0.9em;
+            margin-bottom: 6px;
         }
         
         /* (end of individual page contents) */
