@@ -978,6 +978,43 @@ Source: https://gs.statcounter.com/browser-market-share
             font-size: 0.9em;
             margin-bottom: 6px;
         }
+
+
+        /* --- ABOUT Page Elements --- */
+        
+        #about {
+            margin: auto;
+        }
+
+        #about .flex {
+            display: block;
+        }
+        
+        #about img {
+            width: 100%;
+            max-width: 250px;
+            float: right;       /* In this case flexbox doesn't do what I want, so I use this instead */
+            margin-top: -140px;
+        }
+
+        #about p {
+            margin-right: 320px;    /* Hacky way to make the text respect the image with float */
+        }
+
+        #values {
+            max-width: 540px;
+        }
+
+        #values .gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        #values .gallery img {
+            width: 30%;
+        }
         
         /* (end of individual page contents) */
 
