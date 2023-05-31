@@ -60,21 +60,26 @@
             </div>
             <!---SOME ICONS ARE FROM: https://www.flaticon.com/-->
             
+            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
+                <li> <a href="index.html">Hjem</a> </li>
+                <li> <a href="projects.html">Projekter</a> </li>
+                <li> <a href="services.html">Tjenester</a> </li>
+                <li> <a href="booking.html">Booking</a> </li>
+                <li> <a href="about.html">Om os</a> </li>
+                <li> <a href="contact.html" class="active">Kontakt</a> </li>
+            </ul>
+
             <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="DLB Arkitekter logo"> DLB Arkitekters logo </a>  <!-- DLB Logo -->
             
             <button class="burger-menu" onclick="toggleBurgerMenu()"> <img src="img/icons/burger-menu-icon.svg" alt="Burger Menu toggle"> Menu </button>
-        
-            <ul class="desktop">    <!-- Navigation Menu only visible on Desktop -->
-                <!-- Design to be finished in Figma ... -->
-            </ul>
         </div>
     </nav>
 
 
 
     <main id="find-dlb">
+        <img src="img/contact.jpg" alt="DLB arkitekter arbejder">
         <section>
-            <img src="img/contact.jpg" alt="DLB arkitekter arbejder">
             <h1>Find DLB arkitekter</h1>
             <p class="textbox">DLB Arkitekter stårpå et solidt netværk bestående af mange forskellige aktører. Vi har etableret gode samarbejder med andre arkitekter, bygningskonstruktører og specialister inden for en række områder samt har etableret et godt samarbejde med en lokal ingeniørvirksomhed, som samlet giver, at vi kan tilbyde alle ressourcer.</p>
             <div class="info">
@@ -88,50 +93,49 @@
                 </div>
             </div>
         </section>
+    </main>
 
-        <section id="contact-info">
-            <h2>Åbningstider</h2>
-            <div class="container">
-                <div class="opening-hours">
-                    <p>Mandag:</p>      <p>09:00 - 17:00</p>
-                    <p>Tirsdag:</p>     <p>09:00 - 17:00</p>
-                    <p>Onsdag:</p>      <p>09:00 - 17:00</p>
-                    <p>Torsdag:</p>     <p>09:00 - 17:00</p>
-                    <p>Fredag:</p>      <p>09:00 - 14:00</p>
-                    <p>Lørdag:</p>      <p class="closed">Lukket</p>
-                    <p>Søndag:</p>      <p class="closed">Lukket</p>
-                </div>
-
-                <div id="google-maps">
-                    <iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5345.234492493463!2d11.71683849220957!3d55.71689935878245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46527c1a27747df5%3A0x4d066500da16c00f!2sAhlgade%2063%2C%204300%20Holb%C3%A6k!5e0!3m2!1sda!2sdk!4v1685530336214!5m2!1sda!2sdk" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+    <section id="contact-info">
+        <h2>Åbningstider</h2>
+        <div class="map-container">
+            <div class="opening-hours">
+                <p>Mandag:</p>      <p>09:00 - 17:00</p>
+                <p>Tirsdag:</p>     <p>09:00 - 17:00</p>
+                <p>Onsdag:</p>      <p>09:00 - 17:00</p>
+                <p>Torsdag:</p>     <p>09:00 - 17:00</p>
+                <p>Fredag:</p>      <p>09:00 - 14:00</p>
+                <p>Lørdag:</p>      <p class="closed">Lukket</p>
+                <p>Søndag:</p>      <p class="closed">Lukket</p>
             </div>
-        </section>
 
-        <form id="contact-form" autocomplete="on">
-            <h2>Kontakt os til enhver tid</h2>
-        
-        
-            <div class="flex-container">    <!-- Form items below are built from code samples available from: https://www.w3schools.com/tags/tag_input.asp -->
-                <div class="segment">
-                    <label for="name">Navn</label> <span class="required">*</span>
-                    <input type="text" id="name" name="name">
-                </div>
+            <div id="google-maps">
+                <iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5345.234492493463!2d11.71683849220957!3d55.71689935878245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46527c1a27747df5%3A0x4d066500da16c00f!2sAhlgade%2063%2C%204300%20Holb%C3%A6k!5e0!3m2!1sda!2sdk!4v1685530336214!5m2!1sda!2sdk" width="1" height="1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
 
-                <div class="segment">
-                    <label for="email">E-mail</label> <span class="required">*</span>
-                    <input type="email" id="email" name="email">
-                </div>
+    <form id="contact-form" autocomplete="on">
+        <h2>Kontakt os til enhver tid</h2>
+        
+        <div class="flex-container">    <!-- Form items below are built from code samples available from: https://www.w3schools.com/tags/tag_input.asp -->
+            <div class="segment">
+                <label for="name">Navn</label> <span class="required">*</span>
+                <input type="text" id="name" name="name">
             </div>
 
             <div class="segment">
-                <label for="message">Besked</label> <span class="required">*</span>
-                <textarea id="message" name="message" rows="6"></textarea>
+                <label for="email">E-mail</label> <span class="required">*</span>
+                <input type="email" id="email" name="email">
             </div>
+        </div>
+
+        <div class="segment">
+            <label for="message">Besked</label> <span class="required">*</span>
+            <textarea id="message" name="message" rows="6"></textarea>
+        </div>
         
-            <input class="button" type="submit" value="Send" aria-label="Send" onclick="endContactFormJourney()">
-        </form>
-    </main>
+        <input class="button" type="submit" value="Send" aria-label="Send" onclick="endContactFormJourney()">
+    </form>
 
 
 

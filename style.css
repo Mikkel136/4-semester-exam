@@ -310,7 +310,7 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- Repetitive stuff for sections and containers --- */
 
-    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values, #find-dlb {   /* Fix sizing and alignment */
+    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values, #find-dlb, #contact-info, #contact-form {   /* Fix sizing and alignment */
         width: var(--default-width);
         margin: auto;   /* Center element properly */
     }
@@ -649,7 +649,7 @@ Source: https://gs.statcounter.com/browser-market-share
     
 
     /* --- CONTACT Page Elements --- */
-
+    
     #find-dlb img {
         width: 100%;
         margin-bottom: 20px;
@@ -659,26 +659,26 @@ Source: https://gs.statcounter.com/browser-market-share
         display: flex;
         justify-content: space-between;
         gap: 10px;
+        margin-top: 40px;
     }
 
     #find-dlb .info .container {
+        margin: auto;
         display: flex;
         justify-content: center;
-        align-items: center;
         text-decoration: none;
-        color: black;
-        width: 47%;
-        margin: auto;
         font-size: 0.9em;
+        color: black;
     }
     
     #find-dlb .info .container img {
-        max-width: 58px;
+        max-width: 48px;
+        margin-top: -6px;
     }
-
-    #contact-info .container {
-        display: flex;
-        gap: 16px;
+    
+    #contact-info .map-container {
+        /* display: flex; */
+        justify-content: center;
         margin-top: 10px;
     }
     
@@ -686,23 +686,25 @@ Source: https://gs.statcounter.com/browser-market-share
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        width: 130%;
     }
 
-    #contact-info .opening-hours p:nth-child(odd) {
-        width: 42%;
+    #contact-info .opening-hours p {
+        width: 50%;
+        font-size: 1em;
+        line-height: 1.5em;
     }
 
     #contact-info .opening-hours p:nth-child(even) {
-        width: 57%;
+        text-align: right;
     }
 
     #contact-info #google-maps {
+        margin-top: 30px;
         width: 100%;
     }
     #contact-info #google-maps iframe {
         width: 100%;
-        height: 40vw;
+        height: 60vw;
         border: 0;
     }
 
@@ -822,7 +824,7 @@ Source: https://gs.statcounter.com/browser-market-share
 
         /* --- Repetitive stuff for sections and containers --- */
 
-        #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values, #find-dlb {   /* Fix sizing and alignment */
+        #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values, #find-dlb, #contact-info, #contact-form {   /* Fix sizing and alignment */
             width: var(--default-width);
             margin: auto;   /* Center element properly */
             max-width: 780px;
@@ -1015,8 +1017,77 @@ Source: https://gs.statcounter.com/browser-market-share
         #values .gallery img {
             width: 30%;
         }
+
+        /* --- CONTACT Page Elements --- */
+
+        #find-dlb {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            gap: 7%;
+        }
         
-        /* (end of individual page contents) */
+        #find-dlb img {
+            width: 380px;
+            margin: auto;
+        }
+    
+        #find-dlb .info {
+            max-width: 300px;
+            margin-top: 10px;
+            margin-left: -10px;
+        }
+    
+        #find-dlb .info .container {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 0.9em;
+            color: black;
+        }
+        
+        #find-dlb .info .container img {
+            max-width: 48px;
+            margin-top: -6px;
+        }
+        
+        #contact-info .map-container {
+            display: flex;
+        }
+        
+        #contact-info .opening-hours {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-right: 7%;
+        }
+    
+        #contact-info .opening-hours p {
+            width: 50%;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+    
+        #contact-info #google-maps {
+            margin: 0;
+            margin-bottom: -5px;
+            width: 100%;
+        }
+
+        #contact-info #google-maps iframe {
+            margin: 0;
+            height: 200px;
+        }
+
+        #contact-form {
+            max-width: 580px;
+        }
+        
+    /* (end of individual page contents) */
 
 
 
