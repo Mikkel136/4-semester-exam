@@ -89,7 +89,7 @@ Source: https://gs.statcounter.com/browser-market-share
         margin-top: 10px;   /* Distance itself a little from the heading above */
     }
 
-    .cta .button, #booking-system .button {
+    .cta .button, #booking-system .button, #contact-form .button {
         display: block;     /* A tags display improperly; this fixes it */
         background-color: var(--color3);    /* Refers to CSS variable in :root */
         color: white;   /* Color = Text color */
@@ -104,19 +104,19 @@ Source: https://gs.statcounter.com/browser-market-share
         cursor: pointer
     }
 
-    .cta .button:last-child, #booking-system .button:last-of-type {   /* First-child = First-born element in a family (group) of elements */
+    .cta .button:last-child, #booking-system .button:last-of-type, #contact-form .button:last-of-type {   /* First-child = First-born element in a family (group) of elements */
         border: var(--color3) 2px solid;    /* border (outline): [color] [thickness] [type] */
         color: var(--color3);
         background-color: white;
     }
     
-    .cta .button:first-child, #booking-system .button:first-of-type {      /* ^ You get the idea */
+    .cta .button:first-child, #booking-system .button:first-of-type, #contact-form .button:first-of-type {      /* ^ You get the idea */
         background-color: var(--color2);
         color: white;
         border: none;
     }
 
-    .cta .button:hover, #booking-system .button:hover {    /* I know it doesn't display correctly on mobile, but f*ck it :D */
+    .cta .button:hover, #booking-system .button:hover, #contact-form .button:hover {    /* I know it doesn't display correctly on mobile, but f*ck it :D */
         background-color: black;
         color: white;
         transform: scale(1.1);   /* Scale element to 110% on hover */
@@ -288,12 +288,12 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- Repetitive stuff for sections and containers --- */
 
-    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values {   /* Fix sizing and alignment */
+    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values, #find-dlb {   /* Fix sizing and alignment */
         width: var(--default-width);
         margin: auto;   /* Center element properly */
     }
 
-    #services, #project-list, #prices, #values {     /* Apply top margin */
+    #services, #project-list, #prices, #values, #contact-info, #contact-form {     /* Apply top margin */
         margin-top: var(--default-top-margin);
     }
 
@@ -460,11 +460,11 @@ Source: https://gs.statcounter.com/browser-market-share
         margin: 10px auto;
     }
 
-    #booking-system .segment {
+    #booking-system .segment, #contact-form .segment {
         margin-bottom: 25px;
     }
 
-    #booking-system .text-container, #booking-system label {
+    #booking-system .text-container, #booking-system label, #contact-form label {
         font-size: 0.8em;
         font-family: var(--font);
     }
@@ -474,7 +474,7 @@ Source: https://gs.statcounter.com/browser-market-share
         gap: 5px;
     }
 
-    #booking-system .required {
+    #booking-system .required, #contact-form .required {
         font-size: 14px;
         color: red;
         font-weight: 600;
@@ -512,7 +512,7 @@ Source: https://gs.statcounter.com/browser-market-share
         color: white;
     }
 
-    #booking-system input, #booking-system textarea, #booking-system select {
+    #booking-system input, #booking-system textarea, #booking-system select, #contact-form input, #contact-form textarea, #contact-form select {
         width: 100%;
         border: 2px var(--color3) solid;
         padding: 8px;
@@ -520,13 +520,13 @@ Source: https://gs.statcounter.com/browser-market-share
         font-weight: 600;
     }
 
-    #booking-system .flex-container {
+    #booking-system .flex-container, #contact-form .flex-container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
-    #booking-system .flex-container .segment {
+    #booking-system .flex-container .segment, #contact-form .flex-container .segment {
         width: 48%;
     }
 
@@ -538,18 +538,18 @@ Source: https://gs.statcounter.com/browser-market-share
         padding: 5000px !important;
     }
 
-    #booking-system .button {
+    #booking-system .button, #contact-form .button {
         width: -moz-fit-content;
         width: fit-content;
         margin: auto;
     }
 
-    #booking-system .container .complete {      /* Style elements triggered when User Journey is complete */
+    #booking-system .container .complete, #contact-form .complete {      /* Style elements triggered when User Journey is complete */
         padding: 151px 0;
         text-align: center;
     }
 
-    #booking-system .container .complete img { 
+    #booking-system .container .complete img, #contact-form .complete img { 
         width: 100%;
         max-width: 60px;
         margin-bottom: 20px;
@@ -596,6 +596,7 @@ Source: https://gs.statcounter.com/browser-market-share
     #about img {
         margin-top: 20px;
         width: 50%;
+        height: -moz-fit-content;
         height: fit-content;    /* Fixes image being a strecthy boi */
         border-radius: 60px;
     }
@@ -613,6 +614,74 @@ Source: https://gs.statcounter.com/browser-market-share
     
 
     /* --- CONTACT Page Elements --- */
+
+    #find-dlb img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #find-dlb .info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    #find-dlb .info .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        width: 47%;
+        margin: auto;
+        font-size: 0.9em;
+    }
+    
+    #find-dlb .info .container img {
+        max-width: 58px;
+    }
+
+    #contact-info .container {
+        display: flex;
+        gap: 16px;
+        margin-top: 10px;
+    }
+    
+    #contact-info .opening-hours {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 130%;
+    }
+
+    #contact-info .opening-hours p:nth-child(odd) {
+        width: 42%;
+    }
+
+    #contact-info .opening-hours p:nth-child(even) {
+        width: 57%;
+    }
+
+    #contact-info #google-maps {
+        width: 100%;
+    }
+    #contact-info #google-maps iframe {
+        width: 100%;
+        height: 40vw;
+        border: 0;
+    }
+
+    /* 
+        !!! Contact form code tied into the Booking System code for conosistency reasons !! 
+    */
+
+    #contact-form h2 {
+        margin-bottom: 10px;
+    }
+
+    #contact-form .complete {      /* Style elements triggered when User Journey is complete */
+        padding: 71px 0;
+    }
 
 /* (end of individual page content) */
 
