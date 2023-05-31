@@ -214,8 +214,6 @@ Source: https://gs.statcounter.com/browser-market-share
 
     nav#main .desktop {     /* Desktop navigation strip - Only visible on large screens */
         display: none;          /* Handled by @media query - must be hidden on Mobile version */
-    
-    
     }
 
 
@@ -290,12 +288,12 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- Repetitive stuff for sections and containers --- */
 
-    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices {   /* Fix sizing and alignment */
+    #process, #services, #project-phases, #project-list, #project-dev, #service-list, #booking-system, #prices, #about, #values {   /* Fix sizing and alignment */
         width: var(--default-width);
         margin: auto;   /* Center element properly */
     }
 
-    #services, #project-list, #prices {     /* Apply top margin */
+    #services, #project-list, #prices, #values {     /* Apply top margin */
         margin-top: var(--default-top-margin);
     }
 
@@ -588,6 +586,30 @@ Source: https://gs.statcounter.com/browser-market-share
     
 
     /* --- ABOUT Page Elements --- */
+
+    #about .flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    
+    #about img {
+        margin-top: 20px;
+        width: 50%;
+        height: fit-content;    /* Fixes image being a strecthy boi */
+        border-radius: 60px;
+    }
+
+    #values .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+    }
+    
+    #values .gallery img {
+        width: 47%;
+    }
     
 
     /* --- CONTACT Page Elements --- */
