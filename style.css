@@ -25,17 +25,17 @@ Source: https://gs.statcounter.com/browser-market-share
 
     :root {             /* CSS Variables work a lot like Components in XD or Swatches in Illustrator, Photoshop, InDesign, etc - If there's a need adjust the colors, this will save a lot of time */
         /* Fonts */
-            --font: "Montserrat", "Segoe UI", "Helvetica", "Roboto", sans-serif;    /* Montserrat is the main player, the rest are used as fallback */
+            --font: "Montserrat", "Segoe UI", "Helvetica", "Roboto", sans-serif;    /* font-family: var(--font);         Montserrat is the main player, the rest are used as fallback */
         /* Colors */
-            --color1: #D9D9D9;
+            --color1: #D9D9D9;      /* We're memorizing the color values here so we can define them as "color: var(--color1);" so it'll be easier to change/adjust if needed */
             --color2: #C28671;
             --color3: #8A99A0;
             --color4: #F5F5F5;
-        /* Margins - To streamline left-right margins for mis.c objects */
-            --default-width: 90%;
+        /* Margins - To streamline left-right margins for misc objects */
+            --default-width: 90%;           /* width: var(--default-width); margin: auto; */
         /* Miscelanious - Sizes of common elements, etc */
-            --nav-icon-size: 28px;
-            --default-top-margin: 70px;
+            --nav-icon-size: 28px;          /* size: var(--nav-icon-size); */
+            --default-top-margin: 70px;     /* margin-top: var(--default-top-margin); */
     }
 
 /* end of css variables */
@@ -45,7 +45,7 @@ Source: https://gs.statcounter.com/browser-market-share
 
 /* ====== MAIN PAGE ELEMENTS ====== */
     body {
-        background-color: var(--color4);
+        background-color: var(--color4);        /* Changes background color */
     }
 
     h1, h2, h3, h4, h5, h6 {        /* Re-use code and style multiple thingies at once */
@@ -54,7 +54,7 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     h1, h2 {
-        font-size: 1.4em;
+        font-size: 1.4em;       /* Adjusts font size for headings */
     }
 
     a, p {
@@ -65,7 +65,7 @@ Source: https://gs.statcounter.com/browser-market-share
     p.textbox {
         margin: 18px auto;      /* Adds both top and bottom margin specifically to the textbox to simulate double line breaks */
         font-size: 0.9em;
-        line-height: 1.4em;
+        line-height: 1.4em;     /* Fix line height for readability reasons */
     }
 
     main {
@@ -76,7 +76,7 @@ Source: https://gs.statcounter.com/browser-market-share
         width: var(--default-width);    /* Refers to CSS variable so I only need to define width once */
         margin: auto;
         margin-top: var(--default-top-margin);  /* Same here, except for margin-top */
-        text-align: center;
+        text-align: center;     /* Centers the text */
     }
 
     .cta .container {
@@ -104,7 +104,7 @@ Source: https://gs.statcounter.com/browser-market-share
 
     .cta .button:last-child, #booking-system .button:last-of-type, #contact-form .button:last-of-type {   /* First-child = First-born element in a family (group) of elements */
         border: var(--color3) 2px solid;    /* border (outline): [color] [thickness] [type] */
-        color: var(--color3);
+        color: var(--color3);       /* Text color */
         background-color: white;
     }
     
@@ -214,27 +214,27 @@ Source: https://gs.statcounter.com/browser-market-share
 
     nav#main .desktop {     /* Desktop navigation strip - Only visible on large screens */
         display: none;          /* Handled by @media query - must be hidden on Mobile version */
-        justify-content: center;
-        align-items: center;
-        gap: 2vw;
+        justify-content: center;    /* Center content horizontally */
+        align-items: center;        /* Center content vertically */
+        gap: 2vw;               /* Assign gap/margin between elements of [2% of viewport width] */
         list-style-type: none;
         width: 100%;
         margin: auto;
     }
 
     nav#main .desktop a {
-        display: block;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
+        display: block;     /* Changes visual property to be similar of a div box */
+        text-decoration: none;      /* Removes ugly underline */
+        color: black;       /* Removed link color */
+        font-weight: 600;       /* Makes the font a lil extra thicc */
         font-size: 0.9em;
     }
 
-    nav#main .desktop a.active {
+    nav#main .desktop a.active {    /* Only applied to "active" button element (pre-defined on each page) */
         color: var(--color3);
     }
 
-    nav#main .desktop a:hover {
+    nav#main .desktop a:hover {     /* Only applies to mouseover/hover */
         color: var(--color2);
     }
 
@@ -243,20 +243,20 @@ Source: https://gs.statcounter.com/browser-market-share
 
     nav#burger-content {    /* [Only visible when clicked] -- The contents and design of the Burger Menu */
         width: 100%;
-        height: 100vh;
+        height: 100vh;      /* Force height to take over the entire browser window */
         position: fixed;    /* Forces the nav to stay in place and float on top no matter what */
-        z-index: 1;
+        z-index: 1;         /* Force element to be infront of everything else (default: 0) */
         background-color: white;
     }
 
     nav#burger-content .container {
         width: 75%;
         margin-top: 170px;
-        margin-left: 5%;    /* Minor adjustments -  */
+        margin-left: 5%;
     }
 
     nav#burger-content .container .logo img {
-        max-width: 80px;
+        max-width: 80px;    /* Prevents the logo from becoming massive */
     }
 
     nav#burger-content .container ul {
@@ -273,7 +273,7 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     nav#burger-content .container ul li a {
-        display: flex;
+        display: flex;      /* Align items next to eachother horizontally instead of vertically */
         gap: 6px;
         height: 54px;
         color: black;
@@ -322,12 +322,12 @@ Source: https://gs.statcounter.com/browser-market-share
 
     /* --- FRONTPAGE Elements --- */
 
-    #process video {
+    #process video {        /* Video element on the frontpage */
         width: 100%;    /* Allow video to be responsive */
         margin-bottom: 10px;
     }
 
-    #process video.desktop {
+    #process video.desktop {    /* Hide Desktop video by default - This is handled by @media query below */
         display: none;
     }
 
@@ -352,7 +352,7 @@ Source: https://gs.statcounter.com/browser-market-share
     }
 
     #services .container a:hover {
-        transform: scale(1.05);     /* Enable hover effect */
+        transform: scale(1.05);     /* Effect - Scale to 105% on hover */
     }
 
     #services .container a img {
@@ -631,7 +631,7 @@ Source: https://gs.statcounter.com/browser-market-share
     #about img {
         margin-top: 20px;
         width: 50%;
-        height: -moz-fit-content;
+        height: -moz-fit-content;       /* Fix VScode error :D - I shouldn't care, but fneh */
         height: fit-content;    /* Fixes image being a strecthy boi */
         border-radius: 60px;
     }
@@ -677,7 +677,6 @@ Source: https://gs.statcounter.com/browser-market-share
     }
     
     #contact-info .map-container {
-        /* display: flex; */
         justify-content: center;
         margin-top: 10px;
     }
@@ -703,8 +702,8 @@ Source: https://gs.statcounter.com/browser-market-share
         width: 100%;
     }
     #contact-info #google-maps iframe {
-        width: 100%;
-        height: 60vw;
+        width: 100%;    /* Handle the iframe width in CSS because doing it in HTML simply doesn't work as intended */
+        height: 60vw;   /* Handle the iframe height in CSS because doing it in HTML is a war crime :D */
         border: 0;
     }
 
@@ -772,13 +771,13 @@ Source: https://gs.statcounter.com/browser-market-share
 
    /* ====== CSS VARIABLES START ====== */
 
-    :root {             /* Update relevant CSS variables */
-        /* Margins - To streamline left-right margins for mis.c objects */
-            --default-width: 80%;
-        /* Miscelanious - Sizes of common elements, etc */
-            --nav-icon-size: 32px;
-            --default-top-margin: 70px;
-    }
+        :root {             /* Update relevant CSS variables */
+            /* Margins - To streamline left-right margins for mis.c objects */
+                --default-width: 80%;
+            /* Miscelanious - Sizes of common elements, etc */
+                --nav-icon-size: 32px;
+                --default-top-margin: 70px;
+        }
 
     /* end of css variables */
 
